@@ -964,3 +964,58 @@ section:has(.personagens-box) {
   }
 }
 
+@media (max-width: 768px) {
+  .divisao-wrapper {
+    height: auto;
+    margin: 40px 0;
+  }
+
+  .divisao-img,
+  .cutecute-img {
+    position: relative;
+    top: 0 !important;
+    transform: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .personagens-box {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .personagem-grande img {
+    height: auto;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .personagem-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .grade-personagens {
+    justify-content: center;
+    grid-template-columns: repeat(4, 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+}
+
+
