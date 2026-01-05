@@ -943,3 +943,24 @@ section:has(.personagens-box) {
   font-size: 22px;
   font-style: italic;
 }
+
+
+/* ================= MOBILE RESET ================= */
+@media (max-width: 768px) {
+
+  * {
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section,
+  div {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+  }
+}
+
