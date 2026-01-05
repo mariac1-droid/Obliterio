@@ -962,74 +962,119 @@ section:has(.personagens-box) {
 
 
 
-/* ================= MOBILE HEADER FIX ================= */
-@media (max-width: 768px) {
+/* ========================================================
+   SEÇÃO PERSONAGENS & ARQUIVOS (OTIMIZADO)
+   ======================================================== */
 
-  .main-header {
-    padding: 10px 16px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .main-header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .main-header nav a {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
-  .logo img {
-    height: 28px;
-  }
-
+.personagens-box, .arquivos-box {
+    display: flex;
+    flex-direction: row; /* Lado a lado no computador */
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    max-width: 850px;
+    width: 90%;
+    margin: 60px auto;
+    background: rgba(10, 15, 10, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(230,216,181,0.2);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.8);
 }
-/* ================= PERSONAGENS MOBILE FIX ================= */
-@media (max-width: 768px) {
 
-  .personagens-box {
-    flex-direction: column;
-    padding: 30px 20px;
-    gap: 25px;
+.arquivos-box {
+    flex-direction: column; /* Sempre vertical */
     text-align: center;
-  }
-
-  .personagem-grande {
-    align-items: center;
-  }
-
-  .personagem-grande img {
-    max-width: 220px;
-    height: auto;
-  }
-
-  .personagem-info {
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .personagem-info h3 {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .personagem-info p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .grade-personagens {
-    justify-content: center;
-    grid-template-columns: repeat(4, 55px);
-    gap: 12px;
-  }
-
-  .quad {
-    width: 55px;
-    height: 55px;
-  }
+    max-width: 600px;
 }
 
+/* IMAGEM E TEXTO */
+.personagem-grande img {
+    height: auto;
+    width: 100%;
+    max-width: 280px;
+    object-fit: contain;
+}
+
+.personagem-info {
+    flex: 1;
+}
+
+.grade-personagens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.quad {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ========================================================
+   SUPER RESPONSIVO (PARA CELULAR)
+   ======================================================== */
+
+@media (max-width: 768px) {
+    
+    /* MENU COMPACTO */
+    .main-header {
+        padding: 10px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .main-header nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-header nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    /* PERSONAGENS EM COLUNA (FOTO EM CIMA, TEXTO EMBAIXO) */
+    .personagens-box {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .personagem-grande img {
+        max-width: 200px; /* Almi menor no celular */
+    }
+
+    .personagem-info {
+        width: 100%;
+    }
+
+    .grade-personagens {
+        grid-template-columns: repeat(4, 55px);
+        justify-content: center;
+    }
+
+    .quad {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* AJUSTE DE TEXTOS */
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .book-info, .chapter-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        width: 95%;
+    }
+
+    .book-cover img {
+        width: 180px;
+    }
+}
