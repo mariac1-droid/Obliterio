@@ -155,65 +155,11 @@ body {
 
 /* ================= DIVISÃO FLUTUANTE ================= */
 
-.divisao-img {
-    position: absolute;
-
-    /* POSIÇÃO */
-    top: -535px;             /* 🔼 sobe / 🔽 desce */
-    left: 50%;               /* ↔ eixo horizontal */
-
-    transform: translateX(-50%);
-
-    /* TAMANHO */
-    width: 130%;
-    max-width: none;
-    height: auto;
-
-    /* VISUAL */
-    opacity: 1;              /* totalmente visível */
-    filter: 
-        drop-shadow(0 20px 50px rgba(0,0,0,0.7));
-
-    /* GARANTE QUE NÃO HERDA EFEITOS */
-    mix-blend-mode: normal;
-}
 
 
 /* ================= DIVISÃO INÍCIO → SINOPSE ================= */
 
-.divisao-inicio {
-    position: relative;
-    width: 100%;
-    height: clamp(180px, 22vw, 320px); /* controla o espaço */
-    margin-top: -100px; /* puxa pra cima no desktop */
-    z-index: 50;
-    pointer-events: none;
-}
 
-
-/* 📱 TABLET */
-@media (max-width: 768px) {
-    .divisao-inicio {
-        height: 160px;
-        margin-top: -60px;
-    }
-
-    .divisao-inicio .divisao-img {
-        width: 90%;
-    }
-}
-
-/* 📱 MOBILE */
-@media (max-width: 480px) {
-    .divisao-inicio {
-        height: 130px;
-        margin-top: -40px;
-    }
-
-    .divisao-inicio .divisao-img {
-        width: 95%;
-    }
-}
 
 /* ================= SINOPSE ================= */
 .book-info {
@@ -289,40 +235,35 @@ body {
 /* ================= DIVISÃO CUTECUTE (FINAL) ================= */
 
 /* ================= DIVISOES FINAIS – FIX DEFINITIVO ================= */
-
-.divisao-final,
-.cutecute-final {
+/* ================= DIVIDERS DEFINITIVO ================= */
+.divider {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 80px 0;
+  overflow: hidden;      /* NÃO deixa arrastar */
   pointer-events: none;
-  overflow: hidden;
 }
 
-/* imagens */
-.divisao-final img,
-.cutecute-final img {
-  width: 80%;
-  max-width: 700px;
+.divider img {
+  width: min(90vw, 700px);
   height: auto;
+  max-width: 100%;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
 }
 
 /* 📱 MOBILE */
-@media (max-width: 768px) {
-  .divisao-final,
-  .cutecute-final {
+@media (max-width: 480px) {
+  .divider {
     margin: 50px 0;
   }
 
-  .divisao-final img,
-  .cutecute-final img {
-    width: 90%;
-    max-width: 320px;
+  .divider img {
+    width: 85vw;        /* nunca corta */
   }
 }
+
 
 /* ================= SINOPSE & CAPÍTULO GRATUITO ================= */
 .book-info,
