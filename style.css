@@ -981,32 +981,43 @@ html, body {
 
 
 
-/* ===== FORÇA POSIÇÃO REAL – SEM QUEBRAR RESPONSIVO ===== */
-
-/* DIVISAO PNG */
-.divisao-wrapper .divisao-img {
+/* ================= FIX FINAL – DIVISAO.PNG ================= */
+.divisao-img {
   position: absolute !important;
-  top: 50% !important;          /* muda AQUI */
   left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 90% !important;        /* muda AQUI */
+  transform: translateX(-50%) !important;
+  width: 110% !important;      /* desktop grande */
+  height: auto !important;
+  top: 50% !important;
+  z-index: 60;
 }
 
-/* CUTECUTE PNG */
-.cutecute-divider img {
-  position: relative !important;
-  top: 0 !important;            /* muda AQUI */
-  width: 60% !important;        /* muda AQUI */
+/* TABLET */
+@media (max-width: 768px) {
+  .divisao-img {
+    width: 90% !important;
+    top: 50% !important;
+  }
 }
 
-/* MOBILE */
+/* CELULAR */
 @media (max-width: 480px) {
-  .divisao-wrapper .divisao-img {
-    top: 58% !important;        /* ajuste fino */
-    width: 75% !important;
+  .divisao-img {
+    width: 95% !important;
+    top: 55% !important; /* desce um pouco */
   }
+}
 
-  .cutecute-divider img {
-    width: 45% !important;
-  }
+
+
+/* ================= FIX CUTECUTE.PNG ================= */
+.cutecute-divider,
+.cutecute-final {
+  overflow: visible !important;
+}
+
+.cutecute-divider img,
+.cutecute-final img {
+  max-width: 100% !important;
+  height: auto !important;
 }
