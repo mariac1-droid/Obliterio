@@ -839,14 +839,46 @@ section:has(.personagens-box) {
 }
 
 /* Ajuste específico para o card de personagens */
+/* DESKTOP */
 .personagens-box {
-    display: flex;
-    flex-direction: row !important; /* Foto de um lado, texto do outro */
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .personagens-box {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .personagem-grande img {
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .personagem-info h3 {
+    font-size: 26px;
+  }
+
+  .personagem-info p {
+    font-size: 16px;
+  }
+
+  .grade-personagens {
+    grid-template-columns: repeat(4, 55px);
+    justify-content: center;
+  }
+
+  .quad {
+    width: 55px;
+    height: 55px;
+  }
+}
+
 
 /* Impede que a imagem da Almi cresça demais */
 .personagem-grande img {
@@ -942,4 +974,83 @@ section:has(.personagens-box) {
   font-family: 'Crimson Text', serif;
   font-size: 22px;
   font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== TRAVA ABSOLUTA DE OVERFLOW ===== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Garante que NADA possa ultrapassar a tela */
+img, section, div {
+  max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .main-header {
+    padding: 10px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .main-header nav a {
+    font-size: 12px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .divisao-img,
+  .cutecute-img,
+  .cutecute-divider img {
+    width: 90% !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .divisao-img,
+  .cutecute-img,
+  .cutecute-divider img {
+    width: 80% !important;
+  }
 }
