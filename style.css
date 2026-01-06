@@ -343,37 +343,6 @@ body {
         width: 15%;   /* 🔥 AINDA MENOR */
     }
 }
-/* ================= DIVISOES FINAIS – FIX DEFINITIVO ================= */
-/* ================= DIVIDERS DEFINITIVO ================= */
-.divider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 80px 0;
-  overflow: hidden;      /* NÃO deixa arrastar */
-  pointer-events: none;
-}
-
-.divider img {
-  width: min(90vw, 700px);
-  height: auto;
-  max-width: 100%;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-}
-
-/* 📱 MOBILE */
-@media (max-width: 480px) {
-  .divider {
-    margin: 50px 0;
-  }
-
-  .divider img {
-    width: 85vw;        /* nunca corta */
-  }
-}
-
-
 /* ================= SINOPSE & CAPÍTULO GRATUITO ================= */
 .book-info,
 .chapter-box {
