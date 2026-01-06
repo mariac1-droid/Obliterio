@@ -987,7 +987,7 @@ html, body {
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: 150% !important;      /* desktop grande */
-  height: center !important;
+  height: 260px !important;
   top: 50% !important;
   z-index: 60;
 }
