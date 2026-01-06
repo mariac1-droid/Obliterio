@@ -190,17 +190,6 @@ body {
     pointer-events: none;
 }
 
-.divisao-inicio .divisao-img {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-
-    width: clamp(320px, 70vw, 1100px);
-    height: auto;
-
-    filter: drop-shadow(0 15px 35px rgba(0,0,0,0.6));
-}
 
 /* 📱 TABLET */
 @media (max-width: 768px) {
@@ -299,52 +288,41 @@ body {
 
 /* ================= DIVISÃO CUTECUTE (FINAL) ================= */
 
-.divisao-wrapper {
-    position: relative;
-    width: 100%;
-    height: clamp(200px, 30vw, 420px);
-    margin-top: -120px;
-    z-index: 80;
-    pointer-events: none;
+/* ================= DIVISOES FINAIS – FIX DEFINITIVO ================= */
+
+.divisao-final,
+.cutecute-final {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.cutecute-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 60%;        /* DESKTOP */
-    max-width: 900px;
-    height: auto;
-
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-    z-index: 999;
+/* imagens */
+.divisao-final img,
+.cutecute-final img {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
 }
 
+/* 📱 MOBILE */
 @media (max-width: 768px) {
-    .divisao-wrapper {
-        height: 220px;
-        margin-top: -80px;
-    }
+  .divisao-final,
+  .cutecute-final {
+    margin: 50px 0;
+  }
 
-    .cutecute-img {
-        width: 40%;   /* 🔥 MENOR NO MOBILE */
-    }
+  .divisao-final img,
+  .cutecute-final img {
+    width: 90%;
+    max-width: 320px;
+  }
 }
-
-@media (max-width: 480px) {
-    .divisao-wrapper {
-        height: 180px;
-        margin-top: -60px;
-    }
-
-    .cutecute-img {
-        width: 15%;   /* 🔥 AINDA MENOR */
-    }
-}
-
-
 
 /* ================= SINOPSE & CAPÍTULO GRATUITO ================= */
 .book-info,
