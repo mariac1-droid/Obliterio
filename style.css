@@ -985,9 +985,9 @@ html, body {
 
 /* DIVISÃO */
 .divisor-fixo {
-  width: 100%;
+  width: 150%;
   display: flex;
-  justify-content: center;
+  justify-content: center  !important;
   margin: 80px 0;
   overflow: hidden;
 }
