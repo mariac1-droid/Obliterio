@@ -987,12 +987,12 @@ html, body {
 .divisor {
   position: relative;
   width: 100%;
-  height: 260px;        /* CONTROLA ESPAÇO */
+  height: 330px;        /* CONTROLA ESPAÇO */
   margin: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;    /* NÃO ARRASTA PRO LADO */
+  overflow: center;    /* NÃO ARRASTA PRO LADO */
   pointer-events: none;
 }
 
@@ -1002,7 +1002,7 @@ html, body {
   top: 50%;            /* 🔼 MUDA AQUI */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;          /* 🔥 TAMANHO DESKTOP */
+  width: 100%;          /* 🔥 TAMANHO DESKTOP */
   max-width: 900px;
   height: auto;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
@@ -1040,7 +1040,7 @@ html, body {
   }
 
   .divisor-img {
-    width: 90%;
+    width: 100%;
     top: 50%;
   }
 
