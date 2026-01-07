@@ -981,72 +981,55 @@ html, body {
 
 
 
-/* ===== DIVISOR DEFINITIVO (SEM CONFLITO) ===== */
+/* ================= CONTROLE REAL DAS IMAGENS ================= */
 
-/* ===== DIVISORES UNIVERSAIS ===== */
-.divisor {
+/* CONTAINERS */
+.divisor,
+.cutecute-divider {
   position: relative;
   width: 100%;
-  height: 330px;        /* CONTROLA ESPAÇO */
-  margin: 80px 0;
+  overflow: hidden; /* impede arrastar pro lado */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: center;    /* NÃO ARRASTA PRO LADO */
-  pointer-events: none;
 }
 
-/* IMAGEM */
-.divisor-img {
-  position: absolute;
-  top: 50%;            /* 🔼 MUDA AQUI */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;          /* 🔥 TAMANHO DESKTOP */
-  max-width: 900px;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+/* ===== DIVISAO ===== */
+.img-divisao {
+  position: relative; /* AGORA top funciona */
+  width: 80%;         /* TAMANHO */
+  top: 0px;           /* 🔼 sobe / 🔽 desce */
 }
 
-/* ===== CUTECUTE AJUSTE DIFERENTE ===== */
-.divisor.cutecute .divisor-img {
-  width: 55%;
-  top: 55%;
+/* ===== CUTECUTE ===== */
+.img-cutecute {
+  position: relative;
+  width: 60%;
+  top: 0px;
 }
 
-/* ===== TABLET ===== */
+/* ---------- TABLET ---------- */
 @media (max-width: 768px) {
-  .divisor {
-    height: 180px;
-    margin: 60px 0;
+  .img-divisao {
+    width: 90%;
+    top: 0px;
   }
 
-  .divisor-img {
-    width: 80%;
-    top: 50%;
-  }
-
-  .divisor.cutecute .divisor-img {
-    width: 65%;
-    top: 50%;
+  .img-cutecute {
+    width: 70%;
+    top: 0px;
   }
 }
 
-/* ===== CELULAR ===== */
+/* ---------- CELULAR ---------- */
 @media (max-width: 480px) {
-  .divisor {
-    height: 140px;
-    margin: 40px 0;
+  .img-divisao {
+    width: 95%;
+    top: 0px;
   }
 
-  .divisor-img {
-    width: 100%;
-    top: 50%;
-  }
-
-  .divisor.cutecute .divisor-img {
-    width: 75%;
-    top: 52%;
+  .img-cutecute {
+    width: 80%;
+    top: 0px;
   }
 }
-
