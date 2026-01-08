@@ -10,7 +10,6 @@ html {
 body {
     font-family: 'Crimson Text', serif;
     background-color: #0e0e0e;
-    /* Certifique-se que a imagem existe na pasta */
     background-image: url("fundo.png"); 
     background-repeat: no-repeat;
     background-position: center top;
@@ -138,7 +137,7 @@ body {
 .divisao-img {
     position: absolute;
     /* POSIÇÃO */
-    top: -535px;             /* 🔼 sobe / 🔽 desce */
+    top: -535px;             /* sobe e desce BURRA */
     left: 50%;               /* ↔ eixo horizontal */
     transform: translateX(-50%);
     /* TAMANHO */
@@ -152,16 +151,16 @@ body {
     /* GARANTE QUE NÃO HERDA EFEITOS */
     mix-blend-mode: normal;
 }
-/* ================= DIVISÃO INÍCIO → SINOPSE ================= */
+/* ================= DIVISÃO INÍCIO ATÉ A SINOPSE ================= */
 .divisao-inicio {
     position: relative;
     width: 100%;
-    height: clamp(180px, 22vw, 320px); /* controla o espaço */
-    margin-top: -100px; /* puxa pra cima no desktop */
+    height: clamp(180px, 22vw, 320px); 
+    margin-top: -100px; /* SOBE CARALHPP */
     z-index: 50;
     pointer-events: none;
 }
-/* 📱 TABLET */
+/* TABLET */
 @media (max-width: 768px) {
     .divisao-inicio {
         height: 160px;
@@ -171,7 +170,7 @@ body {
         width: 90%;
     }
 }
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 480px) {
     .divisao-inicio {
         height: 130px;
@@ -241,8 +240,8 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.6);
     background: linear-gradient(135deg, #a8c45a, #6f8f2f);
 }
-/* ================= DIVISÃO CUTECUTE (FINAL) ================= */
-/* ================= DIVISOES FINAIS – FIX DEFINITIVO ================= */
+
+/* ================= DIVISOES FINAIS VAI SE FUDER ================= */
 .divisao-final,
 .cutecute-final {
   width: 100%;
@@ -273,7 +272,7 @@ body {
     max-width: 320px;
   }
 }
-/* ================= SINOPSE & CAPÍTULO GRATUITO ================= */
+/* ================= SINOPSE E CAPÍTULO GRATUITO ================= */
 .book-info,
 .chapter-box {
     display: flex;
@@ -288,7 +287,7 @@ body {
     max-width: 1100px;
     margin: 120px auto;
 }
-/* CAPÍTULO usa layout em coluna */
+/* CAPÍTULO usa layout em coluna PORRA */
 .chapter-box {
     flex-direction: column;
 }
@@ -398,28 +397,24 @@ body {
         font-size: 26px;
     }
 }
-/* ========================================================
-   AQUI ESTAVA O ERRO: REMOVIDO O BLOCO "BOX GERAL" ANTIGO
-   QUE CAUSAVA O QUADRADO DUPLICADO.
-   
-   AGORA SÓ EXISTE O BLOCO "AMOR DOCE" ABAIXO.
-   ======================================================== */
-/*QUADRADO AMOR DOCE*/
-/*quadrado amor doce corrigido*/
+
+ 
+/*==============QUADRADO AMOR DOCE=====================*/
+
 .personagens-box {
     display: flex;
     gap: 40px;
     padding: 40px;
-    max-width: 850px; /* Reduzi para ficar mais compacto como na foto */
+    max-width: 850px; 
     margin: 80px auto;
-    background: rgba(10, 15, 10, 0.85); /* Fundo único */
+    background: rgba(10, 15, 10, 0.85); 
     backdrop-filter: blur(8px);
     border-radius: 12px;
     border: 1px solid rgba(230,216,181,0.2);
     box-shadow: 0 15px 50px rgba(0,0,0,0.8);
     align-items: center;
 }
-/* Garante que não haja nenhum fundo no container pai */
+
 section:has(.personagens-box) {
     background: transparent !important;
     padding: 0;
@@ -489,7 +484,7 @@ section:has(.personagens-box) {
     border-radius: 12px;
     border: 1px solid rgba(230,216,181,0.2);
     box-shadow: 0 15px 50px rgba(0,0,0,0.8);
-    max-width: 600px; /* Mais estreito para combinar com a imagem */
+    max-width: 600px; /* Mais estreito para combinar com a imagem né paezao*/
     margin: 80px auto;
 }
 .arquivos-box h2 {
@@ -523,7 +518,7 @@ section:has(.personagens-box) {
     box-shadow: 0 20px 45px rgba(0,0,0,0.6);
     background: linear-gradient(135deg, #fff1c9, #e6d7a8);
 }
-/* ================= CUTECUTE FINAL E LIMPO ================= */
+/* ================= CUTECUTE FINAL QUE BOSTA CHATA ================= */
 .cutecute-divider {
   position: relative;
   width: 100%;
@@ -551,8 +546,14 @@ section:has(.personagens-box) {
     width: 60%;           /* DIMINUI DE VERDADE */
   }
   
-  /* AJUSTE RESPONSIVO PARA O BOX PERSONAGENS AMOR DOCE */
-  /* Adicionado aqui pois o código antigo que fazia isso foi removido */
+
+
+
+
+
+
+
+    
   .personagens-box {
       flex-direction: column;
       padding: 40px 20px;
@@ -569,7 +570,7 @@ section:has(.personagens-box) {
       justify-content: center;
   }
 }
-/* 📱 MOBILE PEQUENO */
+/* MOBILE PEQUENO */
 @media (max-width: 480px) {
   .cutecute-divider {
     height: 160px;
@@ -606,7 +607,7 @@ section:has(.personagens-box) {
   position: relative;
   filter: grayscale(1) brightness(0.6);
 }
-/* ÍCONE DE CADEADO */
+/* CADEADO */
 .quad.bloqueado::after {
   content: "🔒";
   position: absolute;
@@ -621,7 +622,7 @@ section:has(.personagens-box) {
 .quad.bloqueado {
   pointer-events: none;
 }
-/* ================= DIVISAO FINAL FUNCIONAL ================= */
+/* ================= DIVISAO FINAL FUNCIONAL (agora vai) ================= */
 .divisao-wrapper {
     position: relative;
     width: 100%;
@@ -662,14 +663,14 @@ section:has(.personagens-box) {
         top: 58%;
     }
 }
-/* ================= DESKTOP – SÓ AQUI AUMENTA ================= */
+/* ================= DESKTOP DE NOVO VSF ================= */
 @media (min-width: 1025px) {
     .divisao-wrapper {
         height: 260px;
         margin-top: -80px;
     }
     .divisao-img {
-        width: 110%;   /* 🔥 AUMENTA SÓ NO DESKTOP */
+        width: 110%;   /* AUMENTA SÓ NO DESKTOOOOOOOOOOOOOPPPPPPPPPPPPPP */
         top: 58%;
     }
 }
@@ -677,11 +678,11 @@ section:has(.personagens-box) {
 .ponto-bloqueado {
     cursor: not-allowed;
 }
-/* se quiser garantir que nada seja clicável */
+
 .ponto-bloqueado {
     pointer-events: auto;
 }
-/* Isso garante que um card fique abaixo do outro, e não do lado */
+D
 #personagens, #arquivos {
     display: flex;
     flex-direction: column; /* Força o conteúdo a ficar vertical */
@@ -691,7 +692,7 @@ section:has(.personagens-box) {
     float: none;            /* Remove qualquer tentativa de ficar lado a lado */
     clear: both;            /* Garante que a linha esteja limpa */
 }
-/* Ajuste específico para o card de personagens */
+/* brigadao gpt por fortalecer agora */
 /* DESKTOP */
 .personagens-box {
   display: flex;
@@ -725,12 +726,12 @@ section:has(.personagens-box) {
     height: 55px;
   }
 }
-/* Impede que a imagem da Almi cresça demais */
+/* Impede que a imagem da Almi cresça demais, por mais q a diva mereça */
 .personagem-grande img {
-    max-width: 300px; /* Ajuste esse valor para o tamanho que desejar */
+    max-width: 300px; 
     height: auto;
 }
-/* ================= FOOTER ================= */
+/* ================= FOOTER nao aguento mais ================= */
 .main-footer {
     margin-top: 160px;
     padding: 60px 20px 40px;
@@ -760,7 +761,7 @@ section:has(.personagens-box) {
     position: relative;
     transition: color 0.3s ease;
 }
-/* LINHA ELEGANTE NO HOVER */
+/* LINHA FODA NO HOVER */
 .footer-links a::after {
     content: "";
     position: absolute;
@@ -807,13 +808,13 @@ section:has(.personagens-box) {
   font-style: italic;
 }
 --------------------------------
-/* ===== TRAVA ABSOLUTA DE OVERFLOW ===== */
+/* ===== TRAVA Q TEM Q FUNCIONAR DE OVERFLOW ===== */
 html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden !important;
 }
-/* Garante que NADA possa ultrapassar a tela */
+/* Garante que NADA possa passar da tela, e se passar eu como vidro pq essa bosta me deu 1 SEMANA de dor e sofrimento*/
 img, section, div {
   max-width: 100%;
 }
@@ -852,7 +853,7 @@ img, section, div {
   }
 }
 ----------------------------------
-/* ================= DIVISÃO + CUTE CUTE – DEFINITIVO ================= */
+/* ================= DIVISÃO + CUTE CUTE versao nem sei qual mais ================= */
 .divisor {
   position: relative;
   width: 100%;
@@ -862,7 +863,7 @@ img, section, div {
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  overflow: hidden; /* 🔥 ISSO impede arrastar pro lado */
+  overflow: hidden; /* ISSO impede arrastar pro lado */
 }
 .divisor img {
   width: min(90%, 900px);
@@ -889,7 +890,7 @@ img, section, div {
     width: 55%;
   }
 }
-/* ================= DIVISOES FINAIS – FIX DEFINITIVO ================= */
+/* ================= DIVISOES FINAIS, sem apaagar pq nao se mexe em time q ta vencendo ================= */
 .divisao-final,
 .cutecute-final {
   width: 100%;
@@ -908,7 +909,7 @@ img, section, div {
   height: auto;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
 }
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
   .divisao-final,
   .cutecute-final {
@@ -976,16 +977,16 @@ html, body {
 
 
 
-------------------------------------------------------------
+/*----------------------------nao mexe em NADA antes daqui se não vou me socar--------------------------------*/
 
 
 
 
-/* ================= DIVISORES FIXOS (SEM CONFLITO) ================= */
+/* ================= DIVISORES FIXOS ================= */
 
 /* DIVISÃO */
 .divisor {
-  position: relative; /* permite controle */
+  position: relative; /* controle */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -998,7 +999,7 @@ html, body {
   height: auto;
   position: relative;
   top: 200px; /* MUDA ISSO pra subir/descer */
-     /* 🔥 CONTROLE VERTICAL — MUDA SÓ ISSO */
+     /* CONTROLE VERTICAL!!!!!!!!!! MUDA SÓ ISSO burra */
   margin: -120px 0 40px;       /* ↑ sobe | ↓ desce */
 }
 
